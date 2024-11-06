@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micromarket Tamayo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="FT3.png" alt="Logo" class="logo">
+            <h1>MICROMARKET TAMAYO</h1>
+            <button id="authButton">Iniciar Sesión</button>
+            <button id="sellButton" style="display: none;">Vender</button>
+        </div>
+        <nav class="secondary-nav">
+            <ul class="centered-nav">
+                <li><a href="#" class="tab-link" data-tab="productos">En el colegio</a></li>
+                <li><a href="#" class="tab-link" data-tab="bth">BTH</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container" id="loginContainer" style="display: none;">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+            <p id="loginError" class="error"></p>
+        </form>
+        <button id="backLoginButton">Atrás</button>
+    </div>
+
+    <main id="productos" class="tab-content" style="display: block;">
+        <h1>Sugerencias de hoy</h1>
+        <div class="item-grid">
+            <!-- Productos cargados dinámicamente aquí -->
+        </div>
+    </main>
+
+    <div id="bth" class="tab-content" style="display: none;">
+        <h1>Bienvenido a BTH</h1>
+        <p>Contenido específico para la pestaña BTH.</p>
+    </div>
+
+    <div class="item-details" id="itemDetails" style="display: none;">
+        <h2 id="itemTitle">Detalles del Producto</h2>
+        <img id="itemImage" src="" alt="Imagen del Producto">
+        <p id="itemPrice"></p>
+        <p id="itemDescription"></p>
+        <button id="buyButton">Comprar</button>
+        <button id="closeDetails">Cerrar</button>
+    </div>
+
+    <div class="sell-product-container" id="sellProductContainer" style="display: none;">
+        <h2>Vender Producto</h2>
+        <form id="postProductForm">
+            <input type="text" id="productTitle" placeholder="Título del producto" required>
+            <input type="number" id="productPrice" placeholder="Precio" required>
+            <textarea id="productDescription" placeholder="Descripción del producto" required></textarea>
+            <input type="file" id="productImage" accept="image/*" required>
+            <label for="productCategory">Categoría:</label>
+            <select id="productCategory">
+                <option value="casual">Casual</option>
+                <option value="bth">BTH</option>
+            </select>
+            <button type="submit">Publicar</button>
+            <button type="button" id="cancelSaleButton">Cancelar</button>
+        </form>
+        <button id="backSellButton">Atrás</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
