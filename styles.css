@@ -167,58 +167,56 @@ body {
     text-align: center;
     z-index: 1000;
     max-height: 80vh; /* Limita la altura máxima al 80% del viewport */
-    overflow-y: auto; /* Permite desplazamiento si el contenido es más grande que la ventana */
-}
-
-/* Form fields and buttons */
-.login-container input, .sell-product-container input, .sell-product-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-container button, .sell-product-container button {
-    padding: 10px 15px;
-    background-color: #43a047; /* Verde medio */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover, .sell-product-container button:hover {
-    background-color: #66bb6a; /* Verde claro */
-}
-
-/* Estilo adicional para ventanas más pequeñas en pantallas grandes */
-@media (min-width: 768px) {
+    overflow-y: auto; /* Permite desplaz[_{{{CITATION{{{_1{](https://github.com/la9una/web/tree/ba1073ae044ebb7b538a3b13f0f9598f7c410bb6/docs%2Fbootstrap%2Falignci.md)/* Form fields and buttons */
+    .login-container input, .sell-product-container input, .sell-product-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .login-container button, .sell-product-container button {
+        padding: 10px 15px;
+        background-color: #43a047; /* Verde medio */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .login-container button:hover, .sell-product-container button:hover {
+        background-color: #66bb6a; /* Verde claro */
+    }
+    
+    /* Estilo adicional para ventanas más pequeñas en pantallas grandes */
+    @media (min-width: 768px) {
+        .item-details, .login-container, .sell-product-container {
+            width: 50%;  /* Reduce el ancho para pantallas grandes */
+        }
+    }
+    
+    /* Añadir un poco de margen en la parte inferior para ventanas largas */
     .item-details, .login-container, .sell-product-container {
-        width: 50%;  /* Reduce el ancho para pantallas grandes */
+        margin-bottom: 20px;
     }
-}
-
-/* Añadir un poco de margen en la parte inferior para ventanas largas */
-.item-details, .login-container, .sell-product-container {
-    margin-bottom: 20px;
-}
-
-/* Ajustes específicos para móviles */
-@media (max-width: 600px) {
-    .header-container h1 {
-        font-size: 2em;
+    
+    /* Ajustes específicos para móviles */
+    @media (max-width: 600px) {
+        .header-container h1 {
+            font-size: 2em;
+        }
+    
+        .item {
+            padding: 15px;
+        }
+    
+        .item img {
+            height: 150px;
+        }
+    
+        .centered-nav a {
+            font-size: 1.2em;
+        }
     }
-
-    .item {
-        padding: 15px;
-    }
-
-    .item img {
-        height: 150px;
-    }
-
-    .centered-nav a {
-        font-size: 1.2em;
-    }
-}
+}    
